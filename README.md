@@ -1,1 +1,118 @@
 # -Avantika-Birthday-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Avantika 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .message {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    button {
+      margin-top: 25px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      background: #fff;
+      color: #ff6f91;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background: red;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎂 Happy Birthday, Avantika! 🎂</h1>
+    <h2>Wishing you a day full of smiles and happiness</h2>
+
+    <div class="card">
+      <p class="message">
+        Dear Avantika,<br /><br />
+        On your special day, I just want to wish you lots of happiness, good health,
+        and success in everything you do. May your year ahead be filled with joyful
+        moments, new achievements, and beautiful memories. 🌸✨
+        <br /><br />
+        Enjoy your birthday to the fullest!
+      </p>
+      <button onclick="startConfetti()">Celebrate 🎉</button>
+    </div>
+
+    <footer>
+      Made with 💖 just for you
+    </footer>
+  </div>
+
+  <script>
+    function startConfetti() {
+      for (let i = 0; i < 150; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        document.body.appendChild(confetti);
+
+        setTimeout(() => confetti.remove(), 5000);
+      }
+    }
+  </script>
+</body>
+</html>
